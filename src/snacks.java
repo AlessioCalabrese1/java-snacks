@@ -32,15 +32,36 @@ public class snacks {
 
         //Snack 3
 
-        int[] nmb = {1,2,3,4,5,6,7,8,9};
+        // int[] nmb = {1,2,3,4,5,6,7,8,9};
         
-        int sumDis = 0; 
-        for (int i = 0; i < nmb.length; i++) {
-            if ((i % 2) == 1) {
-                sumDis += nmb[i]; 
+        // int sumDis = 0; 
+        // for (int i = 0; i < nmb.length; i++) {
+        //     if ((i % 2) == 1) {
+        //         sumDis += nmb[i]; 
+        //     }
+        // }
+
+        // System.out.println("La somma dei numeri dispari è: " + sumDis);
+
+
+        //Snack 4
+
+        Random rnd = new Random();
+        int rndNmbA = rnd.nextInt(15);
+        int rndNmbB = rnd.nextInt(15);
+        int[] a = new int[rndNmbA];
+        int[] b = new int[rndNmbB];
+        
+        System.out.println("La lunghezza di a è: " + a.length + "\nLa lunghezza di b è: " + b.length);
+
+        if ((a.length - b.length) >= 0) {
+            for (int i = 0; i < (a.length - b.length); i++) {
+                System.out.println((i+1) + " : " + rnd.nextInt(100));
+            }
+        }else{
+            for (int i = 0; i < (b.length - a.length); i++) {
+                System.out.println((i+1) + " : " + rnd.nextInt(100));
             }
         }
-
-        System.out.println("La somma dei numeri dispari è: " + sumDis);
     }
 }
