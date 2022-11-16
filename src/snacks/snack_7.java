@@ -11,11 +11,14 @@ public class snack_7 {
         System.out.println("La stringa risultante è: " + str);
 
         str = "";
+        String strInv = "";
         for (int i = words.length - 1; i >= 0; i--) {
-            str += words[i];
-            str += " ";
+            for (int j = words[i].length() - 1; j >= 0; j--) {
+                strInv += words[i].charAt(j);
+            }
+            strInv += " ";
         }
-        System.out.println("La stringa INVERSA risultante è: " + str);
+        System.out.println("La stringa INVERSA risultante è: " + strInv);
 
         String strMax = "";
         for (int i = 0; i < words.length; i++) {
