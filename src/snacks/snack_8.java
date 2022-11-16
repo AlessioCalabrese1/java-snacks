@@ -25,9 +25,27 @@ public class snack_8 {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
         }
-
-        System.out.println("Il valore assoluto maggiore è: " + arr[0]);
-        System.out.println("Il valore assoluto minore è " + arr[arr.length-1]);
+        
+        int[] arr2 = new int[10];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 0) {
+                arr2[i] = -(arr[i]);
+            }else{
+                arr2[i] = arr[i];
+            }
+        }
+        //Riordino l'array
+        for (int i = 0; i < arr2.length; i++) {
+            for (int j = 0; j < arr2.length-1; j++) {
+                if (arr2[j] > arr2[j+1]) {
+                    int x = arr2[j+1];
+                    arr2[j+1] = arr2[j];
+                    arr2[j] = x;
+                }
+            }
+        }
+        System.out.println("Il valore assoluto maggiore è: " + arr2[arr2.length-1]);
+        System.out.println("Il valore assoluto minore è: " + arr2[0]);
 
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
